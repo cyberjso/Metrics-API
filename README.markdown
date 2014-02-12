@@ -54,7 +54,7 @@ This is the less granular entity on the model. Everything starts by here. Teams 
 
 	http://[serverName]:[port]/api/v1/teams/boards - Returns back all boards available on the system.
 	http://[serverName]:[port]/api/v1/teams/boards/1 - Returns back information about a specific board
-	http://[serverName]:[port]/api/v1/teams/boards/1/cards?startDate=01-Feb-2014&endDate=08-Feb-2014  - Returns back all cards that have startDate and endDate between a given date interval. If no date interval is provided, a default one is assumed. It is one week (7 days) behind the current date.
+	
 	
 ## Queues
 
@@ -62,7 +62,7 @@ They are used to organize the teams work. One board can has several queues. Team
 
 	http://[serverName]:[port]/api/v1/teams/boards/1/queues - Returns back all queues inside a given board
 	http://[serverName]:[port]/api/v1/teams/boards/1/queues/1 - Returns back all cards inside a given queue
-	http://[serverName]:[port]/api/v1/teams/boards/1/queues/1?date=01-Feb-2014 - Returns back all cards inside a given queue in a specific date
+	http://[serverName]:[port]/api/v1/teams/boards/1/queues/1?from=01-Feb-2014&to=08-Feb-2014 -  Returns back all cards inside a given queue that were on the queue between the date interval
 	
 ## Cards
 
