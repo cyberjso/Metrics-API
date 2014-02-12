@@ -16,8 +16,8 @@ class MetricsController extends Controller {
 	val baseUrl = "/api/v1/teams/"
 	  
 	get(baseUrl + "boards") { request =>
-	  render.json(List(new URL(hostName + baseUrl + "boards/1"), 
-			  		   new URL(hostName + baseUrl + "boards/2"), 
+	  render.json(List(new URL(hostName + baseUrl + "boards/1"),
+			  		   new URL(hostName + baseUrl + "boards/2"),
 			  		   new URL(hostName + baseUrl + "boards/3"))).toFuture
 	}
 	
@@ -30,9 +30,6 @@ class MetricsController extends Controller {
 	
 	
 	get(baseUrl + "board/:boardId/cards") { request =>
-	  	  val dtIni = request.routeParams.getOrElse("startDate", "20-Jan-2014")
-	  	  val dtFim = request.routeParams.getOrElse("endDate", "01-Feb-2014")
-	  	  
 		  render.json(List(new URI(hostName + baseUrl + "boards/" + getParameterValue(request, "boardId") + "queues/" + getParameterValue(request, "queueId") + "/cards/1"),
 				  		   new URI(hostName + baseUrl + "boards/" + getParameterValue(request, "boardId") + "queues/" + getParameterValue(request, "queueId") +"/cards/2"))).toFuture
 	}

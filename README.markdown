@@ -55,7 +55,6 @@ This is the less granular entity on the model. Everything starts by here. Teams 
 	http://[serverName]:[port]/api/v1/teams/boards - Returns back all boards available on the system.
 	http://[serverName]:[port]/api/v1/teams/boards/1 - Returns back information about a specific board
 	
-	
 ## Queues
 
 They are used to organize the teams work. One board can has several queues. Teams user stories will pass through them. They basically represent the team workflow. Here are some request examples:
